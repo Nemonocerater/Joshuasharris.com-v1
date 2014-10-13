@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Joshua Scott Harris</title>
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script src="script/main.js"></script>
+</head>
+<body>
+
+<!--
+
+IDEAS:
+
+Loading Bar on Slideshow for time indicator
+
+Background of slider goes up while content slides horizontally.
+
+Hover Over Graphic - pop up text to notify you that you can click there.
+
+Make custom scrollbar.
+
+Fix Play Button to have shiny moving part
+
+-->
+
+
+<div id="main">
+
+<audio id="music" loop>
+	<source src="I Know.mp3" type="audio/mpeg">
+</audio>
+<audio id="effects">
+	<source src="" type="audio/mpeg">
+</audio>
+
+<div id="menu">
+	<div id="emailMe">
+		<img src="image/icons/mail.png" />
+		<div>
+			joshua40harris@gmail.com
+		</div>
+	</div>
+	<div id="blog">
+		<a href="http://joshuasharris.blogspot.com/">
+			<img src="image/icons/Blogger.png" />
+		</a>
+		<!--<div>
+			<a href="http://joshuasharris.blogspot.com/">Joshua_S._Harris'_Blog</a>
+		</div>-->
+	</div>
+	<div id="volume">
+		<img src="image/icons/volume.png" />
+		<div>
+			<div>
+				<span id="musicVolume" class="volumeControl">Music</span>
+				<div id="musicDetails" class="note"></div>
+				<span id="effectsVolume" class="volumeControl">Sound Effects</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<header>
+	<h1>Joshua Scott Harris</h1>
+	<p>
+		A developer seeking to change the world through fun and interaction.
+	</p>
+</header>
+
+<h2>Game Design</h2>
+
+<div id="game">
+	<img id="patchesAndFudge" src="image/workScreenshots/PatchesAndFudge0.jpg" />
+	<div>
+		<h3>Patches And Fudge</h3>
+		<p>
+			This is the game that got us first place at Global Game Jam Atlanta 2014, where we had 48 hours to develop a game.  The premise of the game is that you are a rational adult thief that can shift into a small imaginative child.  Where the adult sees a normal key, the child sees a flying key that can travel around and unlock doors for him.  When the child sees a terrifying ogre guarding his way, the adult sees a sleeping guard.  The player must use his abilities as both an adult and a child to work his way through the level and obtain his prize.  Make sure to check out this awesome <a href="http://www.youtube.com/watch?v=aQqodQ3OoVI">video preview</a> of the game that our art team made. <br />
+			Art Team: <a target="_blank" href="http://www.tontaveetong.com/">Ginger</a>, <a target="_blank" href="http://www.shirwensun.com/">Sun</a>, <a target="_blank" href="http://www.animatenowsleeplater.com/">Andrew</a>, <a target="_blank" href="http://www.akiart.org/">Aki</a>
+		</p>
+	</div>
+</div>
+
+<div id="game">
+	<img src="image/workScreenshots/Princess.jpg" />
+	<div>
+		<a href="http://www.joshuasharris.com/EmilyAndAnna" class="playGame">
+			<div></div>
+		</a>
+		<h3>Princess Adventure</h3>
+		<p>
+			This is a game for my little cousins Emily and Anna.  Happy Holidays you two!  The princess of the forest must defend her domain from the evil Dragon invaders!
+			Will her fairy friend and her magical flower power be able to save the forest?  Will you help her?
+		</p>
+	</div>
+</div>
+
+<div id="game">
+	<img src="image/workScreenshots/TimeTravelGame.jpg" />
+	<div>
+		<a href="http://www.prism.gatech.edu/~jharris40/vgd/final/Game.html" class="playGame">
+			<div></div>
+		</a>
+		<h3>Kyle's Time Travel Adventure</h3>
+		<p>
+			Kyle the robot crash lands on earth.  In this game it is the goal of the player to help Kyle get back to his ship and return to his home planet.  Kyle has to use his time travel device to travel between the past, present, and future in order to navigate the landscape and work through the various obstacles in his path.  Is there a cliff in your way?  Plant a tree and wait for it to grow so you can climb up it.  Do you need a saw?  Travel back in time to a construction site.  Nothings impossible when you have time at your finger tips in this time travel adventure.
+		</p>
+	</div>
+</div>
+
+<h2>Web Applications @ Southern Company</h2>
+
+<div id="webApps">
+	<div class="arrow"><span>&#x25BA;</span></div>
+	<div class="arrow"><span>&#x25C4;</span></div>
+	<div id="appHolder">
+		<div id="StarsMobile" class="webApp">
+			<img src="image/workScreenshots/starsMobile.jpg" />
+			<img src="image/workScreenshots/starsMobile2.jpg" />
+			<h3>Stars Mobile</h3>
+			<p>
+				Stars is the Southern Company payroll management system.  It is responsible for keeping track of employee hours worked on the various assignments that each employee was tasked with.
+			</p>
+			<p>
+				The Stars Mobile Web App was an application that I built the prototype designs for.  The goal was to give users who report their own hours (or managers who have to report employee hours) a portal to inputing hours from anywhere on their mobile device.
+			</p>
+		</div>
+		<div id="C2Emailer" class="webApp">
+			<img src="image/workScreenshots/c2emailer.jpg" />
+			<h3>Cool Compliance Emailer</h3>
+			<p>
+				Cool Compliance Emailer (C2Emailer) was a system that I helped create which would store premade HTML emails in a database.  C2Emailer emails would be sent to one or more persons or groups whenever a person's privileges were changed in Cool Compliance.  
+			</p>
+			<p>
+				Cool Compliance was the system which controlled the permissions of all employees throughout the various computer systems.
+			</p>
+		</div>
+		<div id="OCC" class="webApp">
+			<img src="image/workScreenshots/OCC_Home.jpg" />
+			<img src="image/workScreenshots/OCC_FAQ.jpg" />
+			<h3>Online Customer Care Mobile</h3>
+			<p>
+				Southern Company's Online Customer Care (OCC) website is the portal for all Georgia Power, Alabama Power, Mississippi Power, and Gulf Power customers to pay their bill, report an outage, or find answers to any of the questions that they had.
+			</p>
+			<p>
+				I worked on a team to create a simplified Mobile OCC Web App with the key features of the desktop version.  This web app was the quick solution to customers for paying bills and reporting outages while on the go.
+			</p>
+		</div>
+	</div>
+</div>
+
+<h2>Graphics Experience</h2>
+
+<div class="graphics">
+	<div>
+		<div id="mesh" data-rotation=true>
+			&nbsp;
+			<div>
+				<h3>Mesh Traversals and Cutting</h3>
+				<img src="image/workScreenshots/meshCut.jpg" />
+				<p>
+					In this project another student and myself had to build several mesh manipulation tools.  The largest of these was to design cutting or cracking functionality.  Another tool we created was one that would go through the mesh and remove non-manifold vertices.  There were also several tools for traversing through the mesh and manipulating the shape of it.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="dance" data-rotation=true>
+			&nbsp;
+			<div>
+				<h3>Dance Choreography Tool</h3>
+				<img src="image/workScreenshots/dance3d.jpg" />
+				<p>
+					This is a tool that allows the user to map out dance routines in a 2D and 3D environment.  The tool then has an avatar dance out the routine in order to demonstrate what the dance looks like.  Users can save their dance routines and capture photos and video of them.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="graphics">
+	<div>
+		<div id="labyrinth" data-rotation=true>
+			&nbsp;
+			<div>
+				<h3>Marble Labyrinth</h3>
+				<img src="image/workScreenshots/labyrinthGame.jpg" />
+				<p>
+					This is a game that I worked on in Computer Graphics.  It was built using <a href="http://processing.org/">Processing's</a> built in 3D engine.  The game allows the player to create a maze and then the player must navigate the ball through the maze in the given time limit.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="shaders" data-rotation=true>
+			&nbsp;
+			<div>
+				<h3>Shaders</h3>
+				<img src="image/workScreenshots/cross.jpg" />
+				<img src="image/workScreenshots/warp.jpg" />
+				<img src="image/workScreenshots/outlines.jpg" />
+				<img src="image/workScreenshots/bumps2.jpg" />
+				<img src="image/workScreenshots/cheeseGrater.jpg" />
+				<img src="image/workScreenshots/blinnPhong.jpg" />
+				<p>
+					LOTS of fun shader work.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<footer>
+	<div>
+		<img src="image/zombie.gif" onClick="alert('Original zombie concept art by Tyler Stowell!')"/>
+		<q>Make sure you refresh the page sometime ;)</q>
+		<span>-Zombie</span>
+	<div>
+	&copy; Joshua Harris 2013 
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48683296-1', 'joshuasharris.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

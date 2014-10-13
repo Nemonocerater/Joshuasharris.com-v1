@@ -1,0 +1,220 @@
+
+@font-face
+{
+	font-family: Immortal;
+	src: url(../IMMORTAL.ttf);
+}
+
+div.navbar
+{
+	position: absolute;
+}
+div.navbar > h1
+{
+	font-family: Immortal;
+	color: #ccf;
+}
+
+jumbotron
+{
+	padding-top: 200px;
+}
+
+div#story
+{
+	margin-bottom: 20px;
+}
+div#story > p
+{
+	display: none;
+}
+div#story > p#story_all
+{
+	display: block;
+}
+
+embed
+{
+	border: 2px solid black;
+}
+
+#Comments
+{
+	margin: 40px;
+}
+#Comments > textarea
+{
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 5px;
+}
+#Comments > input[type=submit]
+{
+	margin: 10px;
+	margin-left: 0;
+	padding: 9px;
+	background-image: none;
+	background-color: #ccc;
+	border: 0;
+	border-radius: 5px;
+}
+#Comments > input[type=submit]:hover
+{
+	background-color: #ddd;
+}
+#Comments > input[type=submit]
+{
+	background-color: #bbb;
+}
+#feedback_sumbitMessage
+{
+	text-align: center;
+	display: none;
+}
+
+/*
+ * Mail Chimp
+ */
+ 
+#mc_embed_signup
+{
+	margin: 40px auto 20px auto;
+	padding: 15px;
+	clear:left; 
+	font:14px Helvetica,Arial,sans-serif;
+}
+
+div.mc-field-group input[type=email]
+{
+	display: inline-block;
+	width: 400px;
+	margin-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+div.mc-field-group input[type=submit]
+{
+	margin: 10px;
+	margin-left: 0;
+	padding: 9px;
+	background-image: none;
+	background-color: #ccc;
+	border: 0;
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+div.mc-field-group input[type=submit]:hover
+{
+	background-color: #ddd;
+}
+div.mc-field-group input[type=submit]:active
+{
+	background-color: #bbb;
+}
+
+/*
+ * Unity 3D Styles
+ */
+
+body {
+
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+
+	background-color: white;
+
+	color: black;
+
+	text-align: center;
+
+}
+
+a:link, a:visited {
+
+	color: #000;
+
+}
+
+a:active, a:hover {
+
+	color: #666;
+
+}
+
+p.header {
+
+	font-size: small;
+
+}
+
+p.header span {
+
+	font-weight: bold;
+
+}
+
+p.footer {
+
+	font-size: x-small;
+
+}
+
+div.content {
+
+	margin: auto;
+
+	width: 960px;
+
+}
+
+div.broken,
+
+div.missing {
+
+	margin: auto;
+
+	position: relative;
+
+	top: 50%;
+
+	width: 193px;
+
+}
+
+div.broken a,
+
+div.missing a {
+
+	height: 63px;
+
+	position: relative;
+
+	top: -31px;
+
+}
+
+div.broken img,
+
+div.missing img {
+
+	border-width: 0px;
+
+}
+
+div.broken {
+
+	display: none;
+
+}
+
+div#unityPlayer {
+
+	cursor: default;
+
+	height: 600px;
+
+	width: 960px;
+
+}

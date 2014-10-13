@@ -1,0 +1,671 @@
+@font-face
+{
+	font-family: Airstrip;
+	src: url('../font/airstrip.ttf');
+	font-weight: normal;
+}
+@font-face
+{
+	font-family: GosmickSans;
+	src: url('../font/GosmickSans.ttf');
+	font-weight: normal;
+}
+
+*
+{
+	padding: 0;
+	margin: 0;
+}
+div.ui-loader
+{
+	display: none;
+}
+
+body
+{
+	background-color: #BBBBBB;
+	font-family: GosmickSans, Arial;
+}
+
+div#main  
+{
+	position: relative;
+	width: 1000px;
+	margin: auto;
+	background-color: #DDDDDD;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+div#menu
+{
+	position: fixed;
+	z-index: 100;
+	top: 200px;
+	left: 0;
+	width: 40px;
+	background-color: rgba(0,0,0,0.3);
+	box-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+	-color: white;
+}
+div#menu > div
+{
+	position: relative;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	padding: 4px;
+}
+div#menu > div:hover,
+div#menu > div:active
+{
+	background-color: rgba(0,0,0,0.2);
+}
+div#menu > div img
+{
+	width: 100%;
+	margin-top: 5px;
+}
+div#menu > div img:hover
+{
+	cursor: pointer;
+}
+div#menu > div > div
+{
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	left: 40px;
+	min-height: 40px;
+	padding: 10px;
+	background-color: white;
+	border: 2px solid #999999;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+div#menu div.note
+{
+	margin-bottom: 5px;
+	font-size: 10px;
+	text-align: right;
+}
+span.volumeControl
+{
+	display: block;
+	width: 150px;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	padding: 0 5px;
+	border: 1px solid rgba(0,0,0,0.5);
+	color: rgba(0,0,0,0.5);
+	font-variant: small-caps;
+	font-weight: bold;
+	background-image: url('../image/1x1.png');
+	background-repeat: repeat-y;
+	background-size: 10%;
+}
+span.volumeControl:last-child
+{
+	margin-bottom: 0;
+}
+span.volumeControl:hover
+{
+	cursor: pointer;
+}
+
+header
+{
+	padding: 50px 0 30px 0;
+	color: black;
+	text-align: center;
+	text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+}
+header > h1
+{
+	padding-top: 8px;
+	font-size: 50px;
+	background-color: rgba(255, 255, 255, 0.3);
+	font-family: Airstrip, Arial;
+}
+header > p
+{
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding-bottom: 8px;
+}
+
+h2
+{
+	margin: 10px 0;
+	padding: 20px 10px;
+	background-color: black;
+	color: white;
+}
+h2:nth-of-type(1)
+{
+	margin-top: 0;
+}
+
+/************************************************************************
+ *	WEB APPLICATIONS
+ */
+
+div#webApps
+{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 30px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: white;
+}
+
+div#webApps > div.arrow
+{
+	position: absolute;
+	height: 100%;
+	opacity: 0.6;
+	transform: scale(0.5,1);
+	-webkit-transform: scale(0.5,1);
+}
+div#webApps > div.arrow:hover
+{
+	opacity: 0.8;
+	background-color: rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+div#webApps > div.arrow:nth-child(1)
+{
+	right: -90px;
+}
+div#webApps > div.arrow:nth-child(2)
+{
+	left: -90px;
+}
+
+div#webApps > div.arrow > span
+{
+	display: block;
+	margin: 100px 10px;
+	font-size: 100px;
+}
+
+div#webApps > div#appHolder
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+div#webApps > div#appHolder > div.webApp
+{
+	position: absolute;
+	top: 0;
+	left: 1200px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+div#webApps > div#appHolder > div.webApp:nth-child(1)
+{
+	left: 0;
+	z-index: 1;
+}
+div#webApps > div#appHolder > div.webApp > h3
+{
+	padding: 10px;
+	font-size: 26px;
+}
+div#webApps > div#appHolder > div.webApp > p
+{
+	padding: 10px;
+	font-size: 18px;
+}
+
+div#StarsMobile > img
+{
+	width: 230px;
+	-height: 100%;
+}
+div#StarsMobile > img:nth-child(1)
+{
+	float: left;
+	padding-right: 10px;
+}
+div#StarsMobile > img:nth-child(2)
+{
+	float: right;
+	padding-left: 10px;
+}
+
+div#C2Emailer > img
+{
+	height: 100%;
+	float: right;
+	padding-left: 10px;
+}
+
+div#OCC > img
+{
+	height: 100%;
+}
+div#OCC > img:nth-child(1)
+{
+	float: left;
+	padding-right: 10px;
+}
+div#OCC > img:nth-child(2)
+{
+	float: right;
+	padding-left: 10px;
+	height: auto;
+	width: 220px;
+}
+
+
+/*******************************************************
+ *	GRAPHICS
+ */
+
+div.graphics
+{
+	display: table;
+	width: 100%;
+	margin: 30px 0;
+}
+div.graphics > div
+{
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+}
+div.graphics > div > div
+{
+	position: relative;
+	display: inline-block;
+	width: 360px;
+	height: 300px;
+	border: 1px solid black;
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+	background-color: white;
+}
+div.graphics > div > div:hover[data-rotation=true]
+{
+	cursor: pointer;
+	animation-duration: 0.6s;
+	animation-name: graphicsRotate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-name: graphicsRotate;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+div.graphics > div > div > div
+{
+	display: none;
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+	width: 870px;
+	height: 642px;
+	z-index: 10;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 2px solid white;
+	background-color: black;
+	color: white;
+	overflow: hidden;
+}
+div.graphics > div > div > div > h3
+{
+	font-size: 28px;
+	padding: 5px;
+	margin-bottom: 25px;
+	background-color: rgba(255,255,255,0.2);
+}
+div.graphics > div > div > div > p
+{
+	margin: 10px 0;
+	font-size: 20px;
+}
+div.graphics > div > div > div a:active,
+div.graphics > div > div > div a:visited
+{
+	color: #8E2DEF;
+}
+div.graphics:nth-child(even) > div > div > div
+{
+	top: -5px;
+}
+div.graphics > div:nth-child(odd) > div > div
+{
+	left: -5px;
+}
+
+div.graphics:last-child
+{
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+
+@keyframes graphicsRotate
+{
+	from
+	{
+		transform: rotateZ(0.75deg);
+	}
+	to
+	{
+		transform: rotateZ(-0.75deg);
+	}
+}
+
+@-webkit-keyframes graphicsRotate
+{
+	from
+	{
+		-webkit-transform: rotateZ(0.75deg);
+	}
+	to
+	{
+		-webkit-transform: rotateZ(-0.75deg);
+	}
+}
+
+div#labyrinth
+{
+	background: url('../image/workScreenshots/labyrinthCreation.jpg');
+}
+div#labyrinth > div  img
+{
+	width: 50%;
+}
+
+div#dance
+{
+	background: url('../image/workScreenshots/dance2d.jpg');
+}
+
+div#shaders
+{
+	background: url('../image/workScreenshots/bumps.jpg');
+}
+div#shaders > div img
+{
+	height: 235px;
+}
+
+div#mesh
+{
+	background: url('../image/workScreenshots/mesh.jpg');
+}
+
+
+
+
+
+/*************************************************************
+ * GAMES
+ */
+
+div#game
+{
+	display: table;
+	width: 100%;
+	height: 200px;
+	margin: 10px 0;
+	background-color: white;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+div#game > *
+{
+	display: table-cell;
+	vertical-align: top;
+}
+div#game > img
+{
+	width: 240px;
+}
+div#game > div
+{
+	position: relative;
+	width: 760px;
+	padding: 0;
+}
+div#game > div > h3
+{
+	padding: 10px 20px;
+}
+div#game > div > p
+{
+	padding: 10px 20px;
+}
+a.playGame
+{
+	float: right;
+	height: 200px;
+	width: 50px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+a.playGame > div
+{
+	width: 100%;
+	height: 80px;
+	margin-top: -80px;
+}
+a.playGame:hover > div
+{
+	animation-duration: 1s;
+	animation-name: playGameSheen;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: playGameSheen;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+@keyframes playGameSheen
+{
+	from
+	{
+		margin-top: -80px;
+	}
+	to
+	{
+		margin-top: 200px;
+	}
+}
+@-webkit-keyframes playGameSheen
+{
+	from
+	{
+		margin-top: -80px;
+	}
+	to
+	{
+		margin-top: 200px;
+	}
+}
+img#GameNoName
+{
+	cursor: pointer;
+}
+
+footer
+{
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+	padding: 15px;
+}
+
+footer img
+{
+	vertical-align: middle;
+}
+
+
+
+
+
+/*
+ * MOBILE
+ *
+ 
+@media only screen and (max-device-width: 1200px) {
+	div#main
+	{
+		width: 100%;
+	}
+	
+	div#menu
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+	}
+	div#menu > div
+	{
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+	}
+	div#menu > div > div
+	{
+		top: 40px;
+		right: 0;
+	}
+	
+	div#aboutMe
+	{
+		margin-top: 80px;
+	}
+	
+	div#webApps > div.arrow
+	{
+		display: none;
+	}
+}*/
+
+
+
+
+
+/*
+ *
+ * Themes
+ *
+ */
+
+/* Blue */
+.blueBody
+{
+	background: #449fe5; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #449fe5 60%, #1e5799 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(60%,#449fe5), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #449fe5 60%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #449fe5 60%,#1e5799 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #449fe5 60%,#1e5799 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #449fe5 60%,#1e5799 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#449fe5', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-size: 100% 100%;
+}
+.blueVolumeControls
+{
+	background-color: #449FE5;
+}
+.blueHeader
+{
+	background-image: url('../image/scenery/ocean.jpg');
+	background-size: 100%;
+	background-position: 0% 42%;
+}
+.bluePlayGame
+{
+	background-image: url('../image/playGame/playGameBlue.jpg');
+}
+.bluePlayGame > div
+{
+	background-image: url('../image/playGame/blueSheen.png');
+}
+
+/* Green */
+.greenBody
+{
+	background: #48ea61; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #48ea61 61%, #008220 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(61%,#48ea61), color-stop(100%,#008220)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #48ea61 61%,#008220 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #48ea61 61%,#008220 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #48ea61 61%,#008220 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #48ea61 61%,#008220 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ea61', endColorstr='#008220',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.greenVolumeControls
+{
+	background-color: #48ea61;
+}
+.greenHeader
+{
+	background-image: url('../image/scenery/hillside.jpg');
+	background-size: 100%;
+	background-position: 0% 50%;
+}
+.greenHeader > h1,
+.greenHeader > p
+{
+	color: white;
+	text-shadow: 3px 3px rgba(0,0,0, 0.5);
+}
+.greenPlayGame
+{
+	background-image: url('../image/playGame/playGameGreen.jpg');
+}
+.greenPlayGame > div
+{
+	background-image: url('../image/playGame/greenSheen.png');
+}
+
+/* Orange */
+.orangeBody
+{
+	background: #f4bc4b; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #f4bc4b 61%, #af671f 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(61%,#f4bc4b), color-stop(100%,#af671f)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #f4bc4b 61%,#af671f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #f4bc4b 61%,#af671f 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #f4bc4b 61%,#af671f 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #f4bc4b 61%,#af671f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4bc4b', endColorstr='#af671f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.orangeVolumeControls
+{
+	background-color: #f4bc4b;
+}
+.orangeHeader
+{
+	background-image: url('../image/scenery/wheat.jpg');
+	background-size: 150%;
+	background-position: 50% 35%;
+}
+.orangePlayGame
+{
+	background-image: url('../image/playGame/playGameOrange.jpg');
+}
+.orangePlayGame > div
+{
+	background-image: url('../image/playGame/orangeSheen.png');
+}

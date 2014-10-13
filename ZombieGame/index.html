@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>A Zombie Story</title>
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>		<!-- Unity Scripts -->
+		<script type="text/javascript">
+			var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+			if (document.location.protocol == 'https:')
+				unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+			document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		</script>
+		<script type="text/javascript">
+			var config = {
+				width: 960,
+				height: 600,
+				params: { enableDebugging:"0" }
+			};
+			var u = new UnityObject2(config);
+			jQuery(function() {
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "ZombieGame.unity3d");
+			});
+		</script>		<!-- Bootstrap -->		<link rel="stylesheet" href="style/bootstrap.min.css" />				<!-- Local -->		<link rel="stylesheet" href="style/main.css" />		
+	</head>
+	<body>		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">			<h1>A Zombie Story</h1>		</div>				<div class="jumbotron" style="margin-bottom:0; background-color:#fcfdff">			<div class="container">
+			
+				<div style="padding-top: 30px;">
+					<h2>Controls:</h2>
+					<p>Arrow keys: move, Spacebar: action button</p>
+					<p>For debugging purposes you can teleport to checkpoints with the number keys</p>
+					<p style="font-size:1.2em;"><em>
+						This web player only works on desktop because you need to download the Unity Web Player, it's like flash, but
+						way more powerful.  Sorry, once the HTML5 web player for Unity comes out you won't have to download anything.
+					</em></p>
+				</div>
+				
+				<div>
+				
+				</div>								<div class="content">					<div id="unityPlayer">						<div class="missing">							<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install in order to play the game!">								<img alt="Unity Web Player. Install in order to play the game!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />							</a>						</div>						<div class="broken">							<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">								<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />							</a>						</div>					</div>				</div>								<hr>
+				
+				<div class="row">
+					<div class="span8" style="background-color: #edb; border: 3px solid #cb8;">
+						<h2 style="color: #984; text-decoration:underline">Please comment about the gameplay:</h2>
+						<ul style="list-style-type: none; color: #984; font-weight: bold;">
+							<li>Were there any bugs?</li>
+							<li>Was anything too easy or too difficult?</li>
+							<li>How did the game 'feel' to play?  Was it smooth or jerky?  Easy to control or difficult?</li>
+							<li>Was the game fun to play?</li>
+						</ul>
+						<div id="Comments">
+							<input id="feedback_email" type="email" name="Email" placeholder="Email Address (Optional)" class="form-control">
+							<textarea id="feedback_message" name="Comment" placeholder="Comments, Concerns, Complaints."></textarea>
+							<input id="feedback_submit" type="submit" value="Send" style="background-color:#cb8; color:#650; font-weight: bold; font-variant:small-caps;">
+							<div id="feedback_sumbitMessage">Your message has been submitted</div>
+						</div>
+					</div>
+					<div class="span4">
+						<div id="mc_embed_signup">
+						<form action="http://joshuasharris.us3.list-manage1.com/subscribe/post?u=e289fcd1fc33f6e0dff19ba0b&amp;id=f2e4240fdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<h2>Subscribe to our mailing list to receive updates about the game.</h2>
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;"><input type="text" name="b_e289fcd1fc33f6e0dff19ba0b_f2e4240fdf" value=""></div>
+							<div class="mc-field-group">
+								<input type="email" value="" name="EMAIL" placeholder="Email Address" class="form-control required email" id="mce-EMAIL"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+							</div>
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>
+						</form>
+						</div>
+					</div>
+				</div>															</div>		</div>		
+		<footer style="background-color:black; color:white;">&laquo; created with <a style="color:white;" href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</footer> 
+		<script src="script/bootstrap.min.js"></script>
+		<script src="script/main.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-48683296-2']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+
+			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		
+	</body>
+</html>
