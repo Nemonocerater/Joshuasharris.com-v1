@@ -512,6 +512,7 @@ footer
 footer img
 {
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 
